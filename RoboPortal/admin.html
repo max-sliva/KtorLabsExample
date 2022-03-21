@@ -36,7 +36,7 @@
 				setUsersTable(msg)
 			}
 
-			var logins = [];
+			var logins = [] //для хранения логинов, чтобы их потом проверять при вводе нового пользователя
 		</script>
 	</head>
 	<body>
@@ -260,7 +260,7 @@
 
 							<label>Логин:</label> <input id="login" name="login" pattern="[A-Za-z].+" placeholder="Начинается с буквы" type="text" size="15" maxlength="15" required>
 							<script>
-								$('#login').blur(function() {
+								$('#login').blur(function() { //ф-ия для проверки введенного логина ан существование среди текущих пользователей
 									var text = $(this).val();
 									//var obj = "${logins}";
 									var index;
